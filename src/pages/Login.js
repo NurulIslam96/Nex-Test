@@ -62,8 +62,8 @@ const Login = () => {
                 Login
               </button>
             </div>
-            <span>
-              Don't have an account? <Link to={"/"}>SIGNUP HERE!</Link>
+            <span className="text-center">
+              Don't have an account? <Link to={"/"} className="text-[#1678CB] font-semibold">SIGNUP HERE!</Link>
             </span>
           </div>
         </form>

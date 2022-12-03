@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/ultimate_hrm.png";
 const Attendance = () => {
   const [tableData, setTableData] = useState([]);
@@ -19,7 +20,9 @@ const Attendance = () => {
   return (
     <section className="container mx-auto overflow-hidden">
       <header className="my-10">
-        <img src={logo} alt="" />
+        <Link to={"/"}>
+          <img src={logo} alt="" />
+        </Link>
       </header>
       <div className="flex justify-center">
         <h2 className="bg-[#1678CB] md:px-20 px-5 py-4 rounded-md text-white font-semibold text-3xl">
@@ -37,7 +40,7 @@ const Attendance = () => {
         <>
           {tableData?.map((data) => (
             <tbody key={data.id}>
-              {Object.entries(data.attendance).map((date,i) => (
+              {Object.entries(data.attendance).map((date, i) => (
                 <tr key={i}>
                   <td>{date[0]}</td>
                   <td>{data.username}</td>
