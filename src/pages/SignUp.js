@@ -127,13 +127,7 @@ const SignUp = () => {
                 className="outline-none border-b px-3"
               />
               <div className="flex md:flex-col flex-col-reverse items-center justify-center">
-                <button
-                  onClick={(e) => handleBackStep(e)}
-                  className="md:absolute md:mr-80 md:mt-0 mt-5"
-                >
-                  Back
-                </button>
-                <button
+              <button
                   onClick={(e) => handleNextStep2(e)}
                   className="bg-[#1678CB] shadow-slate-400 shadow-md w-[142px] h-[49px] text-white rounded-2xl text-base"
                 >
@@ -141,6 +135,12 @@ const SignUp = () => {
                     <p>Next Step</p>
                     <FaArrowRight />
                   </div>
+                </button>
+                <button
+                  onClick={(e) => handleBackStep(e)}
+                  className="md:absolute md:mr-80 md:mt-0 mt-5"
+                >
+                  Back
                 </button>
               </div>
             </div>
@@ -163,17 +163,17 @@ const SignUp = () => {
                 {errors?.password && <small>{errors?.password?.message}</small>}
               </div>
               <div className="flex md:flex-col flex-col-reverse items-center justify-center">
+              <button
+                  type="submit"
+                  className="bg-[#1678CB] shadow-slate-400 shadow-md h-[49px] w-[100px] text-white rounded-2xl text-base"
+                >
+                  Submit
+                </button>
                 <button
                   className="md:absolute md:mr-80 md:mt-0 mt-5"
                   onClick={(e) => handleBackStep2(e)}
                 >
                   Back
-                </button>
-                <button
-                  type="submit"
-                  className="bg-[#1678CB] shadow-slate-400 shadow-md h-[49px] w-[100px] text-white rounded-2xl text-base"
-                >
-                  Submit
                 </button>
               </div>
             </div>
