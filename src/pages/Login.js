@@ -33,7 +33,7 @@ const Login = () => {
     <div className="shadow-lg w-[516px] h-[630px] flex justify-center">
       <div className="flex flex-col w-full">
         <h1 className="font-semibold text-xl text-center my-20">Log in Form</h1>
-        <form onSubmit={handleSubmit(handleSubmitForm)}>
+        <form data-aos="fade-left" onSubmit={handleSubmit(handleSubmitForm)}>
           <div className="flex flex-col gap-12 px-12">
             <input
               type="email"
